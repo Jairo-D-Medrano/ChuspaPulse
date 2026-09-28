@@ -201,44 +201,30 @@ Estado del sistema: OK
 > [!IMPORTANT]
 > Este proyecto se encuentra en desarrollo activo. Los pasos de instalación y ejecución pueden cambiar en futuras versiones.
 ---
-## Compilación con Makefile (sin CMake)
- 
-Para entornos ligeros donde CMake no está disponible, el proyecto incluye un
-`Makefile` alternativo listo para usar.
- 
+## Compilación con Makefile
+
+El proyecto incluye un `Makefile` como wrapper conveniente para invocar los comandos de CMake.
+
 ### Requisitos
- 
+
 | Herramienta | Versión mínima |
-|-------------|---------------|
+|------------|----------------|
 | `g++` / `clang++` | C++17 |
+| CMake | 3.16+ |
 | GNU Make | 4.x |
- 
+
 ### Uso rápido
- 
+
 ```bash
 # Compilar el proyecto
 make
- 
-# Usar un compilador distinto (ej. clang++)
-make CXX=clang++
- 
+
 # Ejecutar los tests
 make test
- 
+
 # Eliminar artefactos de compilación
 make clean
 ```
- 
-### Variables configurables
- 
-| Variable | Valor por defecto | Descripción |
-|----------|------------------|-------------|
-| `CXX` | `g++` | Compilador C++ |
-| `CXXFLAGS` | `-std=c++17 -Wall` | Flags de compilación |
- 
-> **Nota:** el operador `?=` en `CXX` permite sobreescribir el compilador
-> desde la línea de comandos o desde la variable de entorno del sistema sin
-> modificar el Makefile.
  
 ### Estructura esperada
  
