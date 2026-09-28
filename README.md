@@ -20,7 +20,6 @@ Salida esperada:
 Estado del sistema: OK
 ```
 
-
 ## ¿Qué es?
 
 Pulso es una aplicación desarrollada en C++ que permite gestionar y visualizar información relevante de manera centralizada. Está pensada para ofrecer alto rendimiento y control directo sobre los recursos del sistema.
@@ -46,10 +45,18 @@ Gracias a su implementación en C++, Pulso permite una ejecución más rápida y
 ## Instalación
 
 **Requisitos del sistema**
-- Sistema operativo: Windows, Linux o macOS
+- Sistema operativo: **Linux (Kernel 5.4+)**, **Windows 10/11** o **macOS 12+**
 - Compilador de C++ (GCC, Clang o MSVC)
 - CMake (recomendado)
 - Git
+
+### Soporte de Plataformas
+
+| Sistema Operativo | Estado de Soporte | Colectores de Métricas |
+| :--- | :---: | :---: |
+| **Linux (Kernel 5.4+)** | Soporte Pleno | 100% Funcional |
+| **Windows 10/11** | Soporte Pleno | 100% Funcional |
+| **macOS 12+** | Soporte Pleno | 100% Funcional |
 
 ### Pasos básicos
 
@@ -184,35 +191,6 @@ Seleccione una opción:
 # Salida
 Estado del sistema: OK
 ```
-
-**Usando argumentos:**
-
-```bash
-# Entrada
-./pulso --status
-
-# Salida:
-Estado del sistema: OK
-Procesos activos: 5
-Uso de recursos: Normal
-CPU:
-- Uso: 23%
-- Núcleos activos: 4
-
-Memoria (RAM):
-- Uso: 3.2 GB / 8 GB
-- Disponible: 4.8 GB
-
-Disco:
-- Uso: 120 GB / 256 GB
-- Espacio libre: 136 GB
-
-Red:
-- Descarga: 12 Mbps
-- Subida: 3 Mbps
-- Estado: Conectado
-```
-
 ---
 > [!IMPORTANT]
 > Este proyecto se encuentra en desarrollo activo. Los pasos de instalación y ejecución pueden cambiar en futuras versiones.
@@ -270,6 +248,10 @@ project/
 
 ## ✨ Características
 
+### 🌐 Soporte Multiplataforma
+- Compatibilidad plena y nativa con **Linux**, **Windows** y **macOS**.
+- Colectores de métricas unificados sin pérdida funcional.
+
 ### 📊 Métricas monitoreadas
 - CPU
 - RAM
@@ -303,7 +285,6 @@ la última build, gracias al seguimiento de dependencias de Make sobre los
 archivos objeto (`.o`) en `build/`.
 ---
 
-
 ## Documentación
 
 Ver la carpeta [docs/](docs/)
@@ -321,4 +302,3 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Licencia
 MIT — ver [LICENSE](LICENSE)
-
