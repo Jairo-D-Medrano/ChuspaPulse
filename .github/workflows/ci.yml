@@ -107,8 +107,8 @@ jobs:
       - name: Ejecutar tests con ctest
         continue-on-error: true
         run: cd build && ctest --output-on-failure
-    - name: Ejecutar detección de memory leaks con Valgrind
-        if: runner.os == 'Linux'
+      - name: Ejecutar detección de memory leaks con Valgrind
+        if: ${{ runner.os == 'Linux' }}
         run: |
           sudo apt-get update
           sudo apt-get install -y valgrind
