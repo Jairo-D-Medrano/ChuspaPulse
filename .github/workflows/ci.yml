@@ -107,11 +107,6 @@ jobs:
       - name: Ejecutar tests con ctest
         continue-on-error: true
         run: cd build && ctest --output-on-failure
-
-      - name: Ejecutar detección de memory leaks con Valgrind
-        if: runner.os == 'Linux'
-        continue-on-error: true
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y valgrind
-          valgrind --leak-check=full --error-exitcode=1 ./build/tests/pulso_tests
+      - name: Ejecutar deteccion de memory leaks con Valgrind
+        if: ${{ runner.os == 'Linux' }}
+        run: sudo apt-get update && sudo apt-get install -y valgrind && for test_bin in ./build/tests/test_*; do if [ -x "$test_bin" ]; then valgrind --leak-check=full --error-exitcode=1 "$test_bin"; fi; done

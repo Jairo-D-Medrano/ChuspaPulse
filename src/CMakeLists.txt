@@ -18,7 +18,6 @@ target_sources(pulso PRIVATE
     formatters/formatter_csv.cpp
     formatters/formatter_text.cpp
     formatters/formatter_prometheus.cpp
-    formatters/formatter_text.cpp
     http/handler_health.cpp
     http/handler_history.cpp
     http/handler_metrics.cpp
