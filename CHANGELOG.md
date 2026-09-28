@@ -24,5 +24,10 @@ y este proyecto sigue el versionado [SemVer](https://semver.org/lang/es/).
 ## [0.1.0] - 2026-04-22
 
 ### Añadido
+
+* Inicio del proyecto Pulso
+* Creación del repositorio
+* 
+
 - Inicio del proyecto Pulso
 - Creación del repositorio
