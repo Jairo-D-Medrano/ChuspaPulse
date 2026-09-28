@@ -89,22 +89,32 @@ static int run_once_mode(
     }
 
     // 3. FORMATEAR con los formatters OFICIALES
-    std::unique_ptr<pulso::formatters::IFormatter> formatter;
+std::unique_ptr<pulso::formatters::IFormatter> formatter;
 
-    if (format == "json")
-    {
-        formatter = std::make_unique<pulso::formatters::FormatterJSON>();
-    }
-    else if (format == "csv")
-    {
-        formatter = std::make_unique<pulso::formatters::FormatterCSV>();
-    }
-    else if (format == "prometheus")
-    {
-        formatter = std::make_unique<pulso::formatters::FormatterPrometheus>();
-    }
+if (format == "json")
+{
+    formatter = std::make_unique<pulso::formatters::FormatterJSON>();
+}
+else if (format == "csv")
+{
+    formatter = std::make_unique<pulso::formatters::FormatterCSV>();
+}
+else if (format == "prometheus")
+{
+    formatter = std::make_unique<pulso::formatters::FormatterPrometheus>();
+}
 
-    std::string output = formatter->formatear(snapshot);
+// Validación explícita del formato recibido por CLI
+if (!formatter)
+{
+    std::cerr << "[pulso] Formato no soportado: "
+              << format
+              << "\n";
+
+    return 1;
+}
+
+std::string output = formatter->formatear(snapshot);
 
     // 4. IMPRIMIR a stdout
     std::cout << output;

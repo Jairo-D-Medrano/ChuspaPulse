@@ -191,35 +191,6 @@ Seleccione una opción:
 # Salida
 Estado del sistema: OK
 ```
-
-**Usando argumentos:**
-
-```bash
-# Entrada
-./pulso --status
-
-# Salida:
-Estado del sistema: OK
-Procesos activos: 5
-Uso de recursos: Normal
-CPU:
-- Uso: 23%
-- Núcleos activos: 4
-
-Memoria (RAM):
-- Uso: 3.2 GB / 8 GB
-- Disponible: 4.8 GB
-
-Disco:
-- Uso: 120 GB / 256 GB
-- Espacio libre: 136 GB
-
-Red:
-- Descarga: 12 Mbps
-- Subida: 3 Mbps
-- Estado: Conectado
-```
-
 ---
 > [!IMPORTANT]
 > Este proyecto se encuentra en desarrollo activo. Los pasos de instalación y ejecución pueden cambiar en futuras versiones.
