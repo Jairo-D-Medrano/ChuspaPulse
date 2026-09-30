@@ -40,6 +40,7 @@ target_sources(pulso PRIVATE
 if(WIN32)
     target_sources(pulso PRIVATE
         platform/windows/collector_cpu.cpp
+        platform/windows/uptime_collector.cpp
     )
 endif()
 
