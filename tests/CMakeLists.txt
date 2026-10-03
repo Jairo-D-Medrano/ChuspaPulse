@@ -112,3 +112,94 @@ target_link_libraries(test_gestor_alertas PRIVATE
     GTest::gtest_main
 )
 gtest_discover_tests(test_gestor_alertas)
+
+add_executable(test_bateria_collector
+    automatizados/unit/test_bateria_collector.cpp
+    ${PROJECT_SOURCE_DIR}/src/collectors/bateria/bateria_collector.cpp
+)
+target_include_directories(test_bateria_collector PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_bateria_collector PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_bateria_collector)
+
+add_executable(test_temp_collector
+    automatizados/unit/test_temp_collector.cpp
+    ${PROJECT_SOURCE_DIR}/src/collectors/temperatura/temp_collector.cpp
+)
+target_include_directories(test_temp_collector PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_temp_collector PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_temp_collector)
+
+add_executable(test_proc_collector
+    automatizados/unit/test_proc_collector.cpp
+    ${PROJECT_SOURCE_DIR}/src/collectors/procesos/proc_collector.cpp
+)
+target_include_directories(test_proc_collector PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_proc_collector PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_proc_collector)
+
+add_executable(test_net_usage
+    automatizados/unit/test_net_usage.cpp
+    ${PROJECT_SOURCE_DIR}/src/collectors/network/net_usage.cpp
+)
+target_include_directories(test_net_usage PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_net_usage PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_net_usage)
+
+add_executable(test_loadavg_collector
+    automatizados/unit/test_loadavg_collector.cpp
+    ${PROJECT_SOURCE_DIR}/src/collectors/loadavg/loadavg_collector.cpp
+)
+target_include_directories(test_loadavg_collector PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_loadavg_collector PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_loadavg_collector)
+
+add_executable(test_uptime_collector
+    automatizados/unit/test_uptime_collector.cpp
+    ${PROJECT_SOURCE_DIR}/src/collectors/uptime/uptime_collector.cpp
+)
+target_include_directories(test_uptime_collector PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_uptime_collector PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_uptime_collector)
+
+add_executable(test_cpu_usage
+    automatizados/unit/test_cpu_usage.cpp
+    ${PROJECT_SOURCE_DIR}/src/collectors/cpu/cpu_usage.cpp
+)
+target_include_directories(test_cpu_usage PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_cpu_usage PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_cpu_usage)
