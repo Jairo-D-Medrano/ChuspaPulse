@@ -41,7 +41,12 @@ if(WIN32)
     target_sources(pulso PRIVATE
         platform/windows/collector_cpu.cpp
         platform/windows/uptime_collector.cpp
+        platform/windows/ram_usage.cpp
+        platform/windows/disk_usage.cpp
+        platform/windows/net_usage.cpp
+        platform/windows/bateria_collector.cpp
     )
+    target_link_libraries(pulso PRIVATE iphlpapi)
 endif()
 
 target_compile_features(pulso PRIVATE cxx_std_17)

@@ -87,6 +87,12 @@ Referencias:
 
 ---
 
+## Limitaciones en Windows
+
+- **Métricas no soportadas:** En Windows, las métricas de temperatura del CPU, velocidad de ventiladores y load average no están soportadas nativamente por el agente. Su implementación requeriría el uso de APIs externas como WMI (Windows Management Instrumentation) o la integración con herramientas de terceros como OpenHardwareMonitor.
+
+---
+
 ## Consideraciones finales
 
 Las limitaciones descritas corresponden al estado actual del proyecto en la rama `dev`.
