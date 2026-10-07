@@ -112,3 +112,15 @@ target_link_libraries(test_gestor_alertas PRIVATE
     GTest::gtest_main
 )
 gtest_discover_tests(test_gestor_alertas)
+
+add_executable(test_http_endpoints
+    automatizados/integration/test_http_endpoints.cpp
+)
+target_include_directories(test_http_endpoints PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
+target_link_libraries(test_http_endpoints PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+)
+gtest_discover_tests(test_http_endpoints)
